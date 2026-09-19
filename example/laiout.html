@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<!-- laiout Skill のルールに沿って作成した版 -->
+<!-- 視覚的な装飾（色・背景・border・shadow・gradient）は意図的に指定していない -->
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>laiout — フロントエンド開発向けの、レイアウトに特化したAI Skill</title>
+<style>
+  /* laiout のスペーシングスケール（余白のみに適用する） */
+  :root {
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --space-12: 48px;
+    --space-16: 64px;
+  }
+
+  /* 既定のマージンはスケール外の値なので、余白はすべて gap で制御する */
+  h1,
+  h2,
+  p,
+  dl,
+  dt,
+  dd,
+  ul,
+  ol {
+    margin: 0;
+  }
+
+  ul,
+  ol {
+    padding-inline-start: var(--space-6);
+  }
+
+  body {
+    padding: var(--space-4);
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16); /* グループ間の余白 */
+    max-width: 1024px;
+    margin-inline: auto;
+  }
+
+  .page-header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+  }
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .section,
+  .panel {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4); /* グループ内の余白 */
+  }
+
+  /* 対になる2つのセクション（モバイルファースト：既定は縦積み） */
+  .pair {
+    display: grid;
+    gap: var(--space-8);
+  }
+
+  /* 用語と説明の組（レイアウト原則・ブレークポイントで同じ構造を使う） */
+  .terms {
+    display: grid;
+    gap: var(--space-6);
+  }
+
+  .terms > div {
+    display: grid;
+    gap: var(--space-1);
+  }
+
+  .scale {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    padding-inline-start: 0;
+    list-style: none;
+  }
+
+  @media (min-width: 1025px) {
+    .pair {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-12);
+    }
+
+    .terms > div {
+      grid-template-columns: max-content 1fr;
+      column-gap: var(--space-6);
+    }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header class="page-header">
+    <p>実験的</p>
+    <div class="title">
+      <h1>laiout</h1>
+      <p>フロントエンド開発向けの、レイアウトに特化したAI Skill</p>
+    </div>
+    <p>AI特有の装飾的なUIパターンや、いわゆる「AI Slop」と呼ばれる画一的なデザインを発生させないこと、AIの貴重な思考リソースを装飾ではなく機能に使うこと、そして最終的に人間による意図や思想を持ったデザイン・スタイリングが行われることを目的としています。</p>
+  </header>
+
+  <section class="section">
+    <h2>これは何？</h2>
+    <p>laioutは、AIコーディングエージェントに対して、不要な装飾やデザイン判断を行わず、UIのレイアウトを構築するよう指示するSkillです。</p>
+  </section>
+
+  <div class="pair">
+    <section class="panel">
+      <h2>扱うこと</h2>
+      <ul>
+        <li>レイアウトと情報構造</li>
+        <li>余白と整列</li>
+        <li>レスポンシブ対応</li>
+        <li>既存コンポーネントの再利用</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>避けること</h2>
+      <ul>
+        <li>色</li>
+        <li>Border</li>
+        <li>Shadow</li>
+        <li>Gradient</li>
+        <li>その他の視覚的な装飾</li>
+      </ul>
+    </section>
+  </div>
+
+  <section class="section">
+    <h2>レイアウト原則</h2>
+    <dl class="terms">
+      <div>
+        <dt>近接</dt>
+        <dd>関連の強い要素は近くに配置する。</dd>
+      </div>
+      <div>
+        <dt>整列</dt>
+        <dd>端・中心・ベースラインなど、一貫した基準線で要素を整列する。</dd>
+      </div>
+      <div>
+        <dt>反復</dt>
+        <dd>同じ役割を持つ要素には、同じ構造と同じレイアウト手法を使う。</dd>
+      </div>
+      <div>
+        <dt>階層</dt>
+        <dd>関係性に応じて要素をグループ化する。グループ間の余白は、グループ内の余白より大きく取る。</dd>
+      </div>
+      <div>
+        <dt>余白</dt>
+        <dd>要素が窮屈に感じられないよう、十分な余白を確保する。</dd>
+      </div>
+      <div>
+        <dt>読み順</dt>
+        <dd>DOMの順序と視覚的な読み順を、可能な限り一致させる。</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="section">
+    <h2>スペーシング</h2>
+    <p>margin、padding、gap などの余白には、定義されたスペーシングスケールを使います。</p>
+    <ul class="scale">
+      <li>4px</li>
+      <li>8px</li>
+      <li>12px</li>
+      <li>16px</li>
+      <li>24px</li>
+      <li>32px</li>
+      <li>48px</li>
+      <li>64px</li>
+    </ul>
+    <p>このスケールは余白のみに適用し、要素の幅・高さ・フォントサイズなどには強制しません。関連の強い要素ほど小さく、まとまりの異なる要素間は大きく取ります。兄弟要素間の余白は、margin より gap を優先します。</p>
+  </section>
+
+  <section class="section">
+    <h2>レスポンシブ</h2>
+    <p>モバイルファーストを基本とし、基準ビューポート幅は約414pxです。ダッシュボードなど情報密度の高い管理画面は、特に指定がなければPCファーストでもかまいません。小さい画面で要素を不必要に縮小せず、必要に応じて折り返しや再配置を行います。</p>
+    <dl class="terms">
+      <div>
+        <dt>Mobile</dt>
+        <dd>414px以下</dd>
+      </div>
+      <div>
+        <dt>Tablet</dt>
+        <dd>1024px以下</dd>
+      </div>
+      <div>
+        <dt>PC</dt>
+        <dd>1024pxより大きい</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="section">
+    <h2>使い方</h2>
+    <ol>
+      <li>SKILL.md を、AIコーディングエージェントのSkillディレクトリに追加する。</li>
+      <li>プロジェクト固有のコンポーネント、CSSフレームワーク、デザインシステムなどのルールは、Project-specific Rules セクションに追加する。</li>
+    </ol>
+  </section>
+
+  <footer>License: MIT</footer>
+</main>
+</body>
+</html>

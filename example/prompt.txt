@@ -1,0 +1,7 @@
+example/ 以下に、このスキルについて紹介するページを作成してほしい。最初にlaioutスキルを参照せず自由に作成し、それが完成したらlaioutスキルを使用し、
+コンテンツは同一だがルールに則ったものを作ってそれぞれを別のHTMLにしてほしい
+動的要素は不要で、静的HTMLとCSSで良い
+
+---
+note:
+example created by DeepSeek V4.1 Flash on oh my pi.
