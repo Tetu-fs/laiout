@@ -1,0 +1,7 @@
+example/with-design/ref.html このHTMLをベースに、ダミー画像のサムネイルと説明文が並ぶ作品一覧ページを作成してほしい。セクションは2つに分け、それぞれにピックアップして見せたい作品を一つ、通常の作品を3つ配置してほしい。
+最初はlaioutスキルを参照せずにfree.htmlで作成し、その後laioutスキルを参照してlaiout.htmlで作成してほしい。
+サンプルページではtailwindcssをcdn経由で使用している
+
+---
+note:
+example created by GPT-5.6 Luna on Pi.

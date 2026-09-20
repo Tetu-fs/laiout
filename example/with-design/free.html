@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>作品一覧 | Example Studio</title>
+  </head>
+  <body class="min-h-screen bg-sky-50 text-slate-900">
+    <header class="bg-sky-900 bg-[url('https://placehold.jp/1600x360.png')] bg-cover bg-center px-4 py-16 text-white sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-sky-200">Example Studio</p>
+        <h1 class="mt-4 text-4xl font-black tracking-tight sm:text-6xl">作品一覧</h1>
+        <p class="mt-5 max-w-2xl text-base leading-7 text-sky-100 sm:text-lg">
+          日々の観察と小さな実験から生まれた作品を紹介します。気になる作品を見つけてください。
+        </p>
+      </div>
+    </header>
+
+    <main class="mx-auto flex max-w-7xl flex-col gap-12 px-4 py-10 sm:py-16">
+      <section aria-labelledby="visual-title" class="rounded-3xl bg-white p-5 shadow-xl shadow-sky-950/10 sm:p-8">
+        <div class="flex items-end justify-between gap-4 border-b border-sky-100 pb-5">
+          <div>
+            <p class="text-sm font-bold uppercase tracking-[0.2em] text-sky-500">01 / Visual</p>
+            <h2 id="visual-title" class="mt-2 text-3xl font-black tracking-tight text-sky-950">視覚表現</h2>
+          </div>
+          <span class="hidden rounded-full bg-sky-100 px-4 py-2 text-sm font-bold text-sky-700 sm:inline">4 works</span>
+        </div>
+
+        <article class="mt-6 grid overflow-hidden rounded-2xl bg-sky-50 md:grid-cols-2">
+          <img class="h-full min-h-64 w-full object-cover" src="https://placehold.jp/900x600.png" alt="青い光が広がる抽象作品のダミー画像" />
+          <div class="flex flex-col justify-center gap-4 p-6 sm:p-8">
+            <span class="w-fit rounded-full bg-pink-100 px-3 py-1 text-xs font-bold uppercase tracking-wider text-pink-700">Pickup</span>
+            <h3 class="text-2xl font-extrabold text-sky-950">余白のなかの光</h3>
+            <p class="leading-7 text-slate-600">静かな空間に差し込む光をテーマにした、写真とタイポグラフィの実験作品です。</p>
+            <p class="text-sm font-semibold text-sky-600">Art direction / 2024</p>
+          </div>
+        </article>
+
+        <div class="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="overflow-hidden rounded-2xl bg-white shadow-md ring-1 ring-sky-100">
+            <img class="aspect-[4/3] w-full object-cover" src="https://placehold.jp/480x360.png" alt="カラフルな図形が並ぶ作品のダミー画像" />
+            <div class="p-5">
+              <h3 class="font-bold text-sky-950">Shape Study 01</h3>
+              <p class="mt-2 text-sm leading-6 text-slate-600">形と色の組み合わせを試したポスター。</p>
+            </div>
+          </article>
+          <article class="overflow-hidden rounded-2xl bg-white shadow-md ring-1 ring-sky-100">
+            <img class="aspect-[4/3] w-full object-cover" src="https://placehold.jp/480x360.png" alt="白い紙に線が描かれた作品のダミー画像" />
+            <div class="p-5">
+              <h3 class="font-bold text-sky-950">Lines in Motion</h3>
+              <p class="mt-2 text-sm leading-6 text-slate-600">動きのリズムを一本の線で表現。</p>
+            </div>
+          </article>
+          <article class="overflow-hidden rounded-2xl bg-white shadow-md ring-1 ring-sky-100">
+            <img class="aspect-[4/3] w-full object-cover" src="https://placehold.jp/480x360.png" alt="淡い色のグラデーション作品のダミー画像" />
+            <div class="p-5">
+              <h3 class="font-bold text-sky-950">Soft Spectrum</h3>
+              <p class="mt-2 text-sm leading-6 text-slate-600">日常の色を集めた小さな標本。</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="product-title" class="rounded-3xl bg-white p-5 shadow-xl shadow-sky-950/10 sm:p-8">
+        <div class="flex items-end justify-between gap-4 border-b border-sky-100 pb-5">
+          <div>
+            <p class="text-sm font-bold uppercase tracking-[0.2em] text-sky-500">02 / Product</p>
+            <h2 id="product-title" class="mt-2 text-3xl font-black tracking-tight text-sky-950">プロダクト</h2>
+          </div>
+          <span class="hidden rounded-full bg-sky-100 px-4 py-2 text-sm font-bold text-sky-700 sm:inline">4 works</span>
+        </div>
+
+        <article class="mt-6 grid overflow-hidden rounded-2xl bg-pink-50 md:grid-cols-2">
+          <img class="h-full min-h-64 w-full object-cover md:order-2" src="https://placehold.jp/900x600.png" alt="机の上に並んだプロダクトのダミー画像" />
+          <div class="flex flex-col justify-center gap-4 p-6 sm:p-8">
+            <span class="w-fit rounded-full bg-pink-100 px-3 py-1 text-xs font-bold uppercase tracking-wider text-pink-700">Pickup</span>
+            <h3 class="text-2xl font-extrabold text-pink-950">週末の記録帳</h3>
+            <p class="leading-7 text-slate-600">週末に見つけたものを写真と短い文章で残す、ミニマルな記録アプリ。</p>
+            <p class="text-sm font-semibold text-pink-600">UI / Development / 2024</p>
+          </div>
+        </article>
+
+        <div class="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="overflow-hidden rounded-2xl bg-white shadow-md ring-1 ring-pink-100">
+            <img class="aspect-[4/3] w-full object-cover" src="https://placehold.jp/480x360.png" alt="スマートフォン画面のダミー画像" />
+            <div class="p-5">
+              <h3 class="font-bold text-pink-950">Daily Note</h3>
+              <p class="mt-2 text-sm leading-6 text-slate-600">一日の終わりに使うメモアプリ。</p>
+            </div>
+          </article>
+          <article class="overflow-hidden rounded-2xl bg-white shadow-md ring-1 ring-pink-100">
+            <img class="aspect-[4/3] w-full object-cover" src="https://placehold.jp/480x360.png" alt="カード型の画面が並ぶダミー画像" />
+            <div class="p-5">
+              <h3 class="font-bold text-pink-950">Pocket List</h3>
+              <p class="mt-2 text-sm leading-6 text-slate-600">思いつきをすぐ保存するリスト。</p>
+            </div>
+          </article>
+          <article class="overflow-hidden rounded-2xl bg-white shadow-md ring-1 ring-pink-100">
+            <img class="aspect-[4/3] w-full object-cover" src="https://placehold.jp/480x360.png" alt="デスクトップ画面のダミー画像" />
+            <div class="p-5">
+              <h3 class="font-bold text-pink-950">Open Desk</h3>
+              <p class="mt-2 text-sm leading-6 text-slate-600">チームの作業を共有するボード。</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-sky-100 px-4 py-8 text-center text-sm text-slate-500">
+      <p>© 2024 Example Studio</p>
+    </footer>
+  </body>
+</html>

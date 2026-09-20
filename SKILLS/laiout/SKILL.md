@@ -14,10 +14,11 @@ The UI should be structured so that humans can freely add and adjust visual desi
 ## Basic Rules
 
 1. Do not add visual decoration unless explicitly requested by the user.
-2. Use existing UI components and parts as they are.
-3. Do not create new components that duplicate or closely resemble existing components.
+2. Use existing UI elements, styles, and components as they are.
+3. Do not create new UI elements or styles that duplicate or closely resemble existing ones.
 4. Follow the layout principles described below.
-5. Do not make design decisions beyond what is necessary to implement the layout.
+5. Do not modify, override, or neutralize the existing visual design unless explicitly requested.
+6. Do not make design decisions beyond what is necessary to implement the layout.
 
 ### For Modern Web Frontend Projects
 
@@ -86,9 +87,11 @@ If the project uses a specific CSS framework or styling method, follow it rather
 
 ## Visual Design
 
-- Do not independently add visual decoration such as colors, backgrounds, borders, shadows, or gradients.
-- For typography, follow explicit user requirements or the existing UI.
-- Do not alter the visual design of existing components.
+- Do not introduce new visual design decisions unless explicitly requested.
+- Preserve and reuse existing visual styles when using existing UI elements.
+- Existing colors, backgrounds, borders, shadows, gradients, typography, and other visual styles should remain effective.
+- Do not override or neutralize existing styles.
+- For typography, follow explicit user requirements or existing UI styles.
 
 ## Project-specific Rules
 

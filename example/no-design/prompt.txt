@@ -4,4 +4,4 @@ example/ 以下に、このスキルについて紹介するページを作成�
 
 ---
 note:
-example created by DeepSeek V4.1 Flash on oh my pi.
+example created by DeepSeek V4.1 Flash on omp.
